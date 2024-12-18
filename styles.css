@@ -88,6 +88,7 @@ input {
     display: none;
 }
 
+/* control border */
 .checkbox-container:has(#border-control-checkbox:checked) + .main-container{
     border: 0px;
 }
@@ -96,6 +97,7 @@ input {
     display: none;
 }
 
+/* control padding */
 .checkbox-container:has(#padding-control-checkbox:checked) + .main-container{
     padding: 0px;
 }
@@ -104,6 +106,7 @@ input {
     display: none;
 }
 
+/* control content */
 .checkbox-container:has(#content-control-checkbox:checked) + .main-container *{
     display: none;
 }
@@ -112,5 +115,19 @@ input {
     display: none;
 }
 
+/*
+References for CSS implementation:
+1. Complex CSS selector for parent of active child: Used for implementing parents with child having checkbox:checked
+https://stackoverflow.com/questions/45004/complex-css-selector-for-parent-of-active-child
+
+2. Styling nth child: Used to select the sibling with Subsequent-sibling combinator (~)
+https://stackoverflow.com/questions/44428250/css-style-nth-sibling
+
+3. Styling next sibling: Using next-sibling Combinator (+)
+https://developer.mozilla.org/en-US/docs/Web/CSS/Next-sibling_combinator
+
+4. Validating the resource accessed using MDN documentation
+https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator
+*/
 
 
