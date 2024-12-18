@@ -19,7 +19,7 @@
 > > https://developer.mozilla.org/en-US/docs/Web/CSS/Next-sibling_combinator
 > 4. Validating the resource accessed using MDN documentation
 > > https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator
-> 4. Box Model Reference
+> 5. Box Model Reference
 > > https://blog.webdevsimplified.com/2021-12/box-model/
 
 ## Live Demo
