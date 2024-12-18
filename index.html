@@ -3,9 +3,119 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Box Model CSS</title>
+
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+    <!-- Box Model Control -->
+    <div class="checkbox-container">
+        <div>
+            <h4>Box Model Controller</h4>
+        </div>
+        <div class="checkbox margin-control">
+            <input type="checkbox" id="margin-control-checkbox" name="margin-control-checkbox"/>
+            <label for="margin-control-checkbox">Margin</label>
+        </div>
+        <div class="checkbox border-control">
+            <input type="checkbox" id="border-control-checkbox" name="border-control-checkbox"/>
+            <label for="border-control-checkbox">Border</label>
+        </div>
+        <div class="checkbox padding-control">
+            <input type="checkbox" id="padding-control-checkbox" name="padding-control-checkbox"/>
+            <label for="padding-control-checkbox">Padding</label>
+        </div>
+        <div class="checkbox content-control">
+            <input type="checkbox" id="content-control-checkbox" name="content-control-checkbox"/>
+            <label for="content-control-checkbox">Content</label>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <header>
+            <div>
+                <h1>
+                    Box Model in CSS
+                </h1>
+            </div>
+        </header>
     
+        <!-- Introduction to Box Model  -->
+        <section>
+            <h2>
+                What is Box Model?
+            </h2>
+            <p>
+                Everything in a webpage is a rectangular box. The text, buttons, inputs, pictures all of them are just a box, also a circle drawn using CSS will be represented as a box when it is drawn to screen. And this box is constitute of content, padding, border and margin which in total makes up box model. 
+            </p>
+        </section>
+    
+        <!-- Content in Box Model  -->
+        <section>
+            <h2>
+                Content
+            </h2>
+            <p>
+                Whatever is inside the box is called the content of box. This content can be text, image or even just fixed width and height.
+            </p>
+        </section>
+    
+        <!-- Padding in Box Model  -->
+        <section>
+            <h2>
+                Padding
+            </h2>
+            <p>
+                Padding is exactly outside the content and it controls the space between border of the box and the content of the box.
+            </p>
+        </section>
+    
+        <!-- Border in Box Model  -->
+        <section>
+            <h2>
+                Border
+            </h2>
+            <p>
+                Border is space between the margin and the padding of the box.
+            </p>
+        </section>
+    
+        <!-- Margin in Box Model  -->
+        <section>
+            <h2>
+                Margin
+            </h2>
+            <p>
+                Margin is space between the border of box itself and borders of adjacent boxes.
+            </p>
+        </section>
+    
+         <!-- Margin Collapse in Box Model  -->
+         <section>
+            <h2>
+                Margin Collapse
+            </h2>
+            <p>
+                If two html elements are sibling to each other, and they both have a margin then their margin will collapse so only the largest of two margin is used between the elements.
+            </p>
+        </section>
+    
+        <!-- Box Sizing in Box Model  -->
+        <section>
+            <h2>
+                Box Sizing
+            </h2>
+            <p>
+                <strong>box-sizing</strong> property can be used to change how the box model calculates sizes and the default value of it is <strong>content-box</strong>, which means the content of the element will be the exact width/height defined by the width and height properties in CSS. This value can be changed to <strong>border-box</strong> which means the width/height properties in CSS will represent the width/height of the content combined with the border and padding.
+            </p>
+        </section>
+
+    </div>
+    <!-- Box Model Labels -->
+     <div class="label box-model">Box Model</div>
+     <div class="label margin">Margin</div>
+     <div class="label border">Border</div>
+     <div class="label padding">Padding</div>
+     <div class="label content">Content</div>
 </body>
 </html>

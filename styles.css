@@ -1,0 +1,116 @@
+:root {
+    background-color: white;
+}
+
+body {
+    background-color: lightblue;
+    border: 5px dotted green;
+    margin: 25px
+}
+
+.main-container {
+    background-color: rgba(0, 128, 0, 0.411);
+    border: 30px solid grey;
+    padding: 100px;
+    margin: 100px 20%;
+}
+
+.main-container > * {
+    background-color: rgba(255, 0, 0, 0.479);
+}
+
+/* Box Model Labels */
+.label {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.box-model {
+    position: absolute;
+    top: 0px;
+}
+
+.margin {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+.border {
+    position: absolute;
+    top: 130px;
+    left: 32%;
+}
+
+.padding {
+    position: absolute;
+    top: 170px;
+    left: 35%;
+}
+
+.content {
+    position: absolute;
+    top: 500px;
+    left: 40%;
+    font-size: 90px;
+    color: rgba(255, 217, 0, 0.616);
+}
+
+/* Box Model Control */
+.checkbox-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+    background-color: rgba(138, 32, 32, 0.685);
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    font-size: 32px;
+}
+
+input {
+    width: 30px;
+    height: 30px;
+}
+
+.checkbox>*:hover {
+    cursor: pointer;
+}
+
+
+/* control margin */
+.checkbox-container:has(#margin-control-checkbox:checked) + .main-container{
+    margin: 0px;
+}
+
+.checkbox-container:has(#margin-control-checkbox:checked) ~.margin{ /* equivalent to .checkbox-container:has(#margin-control-checkbox:checked) + .main-container + .box-model + .margin*/ 
+    display: none;
+}
+
+.checkbox-container:has(#border-control-checkbox:checked) + .main-container{
+    border: 0px;
+}
+
+.checkbox-container:has(#border-control-checkbox:checked) ~ .border{
+    display: none;
+}
+
+.checkbox-container:has(#padding-control-checkbox:checked) + .main-container{
+    padding: 0px;
+}
+
+.checkbox-container:has(#padding-control-checkbox:checked) ~ .padding{
+    display: none;
+}
+
+.checkbox-container:has(#content-control-checkbox:checked) + .main-container *{
+    display: none;
+}
+
+.checkbox-container:has(#content-control-checkbox:checked) ~ .content{
+    display: none;
+}
+
+
+
