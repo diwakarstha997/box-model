@@ -79,14 +79,28 @@ input {
 }
 
 
-/* control margin */
+/* CONTROL MARGIN */
 .checkbox-container:has(#margin-control-checkbox:checked) + .main-container{
     margin: 0px;
 }
 
-.checkbox-container:has(#margin-control-checkbox:checked) ~.margin{ /* equivalent to .checkbox-container:has(#margin-control-checkbox:checked) + .main-container + .box-model + .margin*/ 
+/* equivalent to .checkbox-container:has(#margin-control-checkbox:checked) + .main-container + .box-model + .margin*/ 
+.checkbox-container:has(#margin-control-checkbox:checked) ~.margin{ 
     display: none;
 }
+/* CONTROL MARGIN */
+
+
+/* Box Model Label Adjustment */
+.checkbox-container:has(#margin-control-checkbox:checked) ~ .border{
+    top: 30px;
+}
+
+.checkbox-container:has(#margin-control-checkbox:checked) ~ .padding{ 
+    top: 70px;
+}
+/* Box Model Label Adjustment */
+
 
 /* control border */
 .checkbox-container:has(#border-control-checkbox:checked) + .main-container{
@@ -177,6 +191,12 @@ input {
         left: 35%;
         font-size: 40px;
     }
+
+    /* Box Model Labels Adjustment*/
+    .checkbox-container:has(#margin-control-checkbox:checked) ~ .padding{ 
+        top: 65px;
+    }
+    /* Box Model Labels Adjustment*/
 }
 
 @media (max-width:480px) {
@@ -218,10 +238,19 @@ input {
         width: 14px;
         height: 14px;
     }
+
+    /* Box Model Labels Adjustment*/
+    .checkbox-container:has(#border-control-checkbox:checked) ~ .padding{ 
+        top: 50px;
+    }
+    /* Box Model Labels Adjustment*/
 }
 
 
 /*
+Note: Box Label Adjustment is for adjusting label position when margin, border is removed 
+it affects the label presentation on screen as they are at absolute position
+
 References for CSS implementation:
 1. Complex CSS selector for parent of active child: Used for implementing parents with child having checkbox:checked
 https://stackoverflow.com/questions/45004/complex-css-selector-for-parent-of-active-child
